@@ -1,0 +1,343 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: white;
+}
+
+header {
+    background-color: #111;
+    padding: 15px 0;
+    text-align: center;
+}
+
+#header__navigation {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+#header__navigation li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#bestFilm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#bestFilm h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#bestFilm__image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#bestFilm__info {
+    max-width: 600px;
+}
+
+#bestFilm__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#bestFilm__buttonInfo {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#bestFilm__buttonInfo:hover {
+    background-color: #ff0000;
+}
+
+#bestFilm__description {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.modalContent__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Add more styles for the modal content as needed */
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.box {
+    margin-right: 20px;
+    flex: 0 0 auto;
+}
+
+.box img {
+    width: 100%;
+    border-radius: 8px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay p {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.overlay-button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.overlay-button:hover {
+    background-color: #ff0000;
+}
+
+.box:hover img {
+    opacity: 0.8;
+}
+
+.box:hover .overlay {
+    opacity: 1;
+}
+
+/* Carousel controls */
+.controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: #1f1f1f;
+    color: white;
+    font-size: 24px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #e50914;
+}
+
+.left {
+    margin-left: 20px;
+}
+
+.right {
+    margin-right: 20px;
+}
+
+/* Header styling */
+header {
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+header nav li {
+    margin-right: 20px;
+}
+
+header a {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+header a:hover {
+    font-weight: bold;
+}
+section#categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+div#bestFilmsList , div#DramaList,div#ActionList , div#BiographyList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    justify-content: space-around;
+}
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.box {
+    margin-right: 20px;
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.box img {
+    width: 100%;
+    border-radius: 8px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.overlay h3 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.overlay-button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.overlay-button:hover {
+    background-color: #e50914;
+}
+
+.box:hover img {
+    opacity: 0.8;
+}
+
+.box:hover .overlay {
+    opacity: 1;
+}
